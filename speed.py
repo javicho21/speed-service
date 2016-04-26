@@ -8,10 +8,10 @@ time.sleep(2)
 RPIhostname = "node-R2"
 RPIip = "192.168.0.103"
 
-client.connect("iot.eclipse.org", 1883, 60)
+#client.connect("iot.eclipse.org", 1883, 60)
 client.connect("localhost", 1883, 60)
 
-time_stamp = int(time.time()*1000)
+time_stamp = int(time.time()*1000000000)
 
 arq = open('/home/azhang/jarova/python/speed-service/speedtest.txt', 'r')
 textoPing = arq.readline()
